@@ -1,0 +1,68 @@
+<?php
+
+namespace Yass\BlogBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Yass\BlogBundle\Model\Publication;
+
+
+/**
+ * Alert
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Yass\BlogBundle\Entity\AlertRepository")
+ */
+class Alert extends Publication
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="level", type="integer")
+     */
+    private $level;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set level
+     *
+     * @param integer $level
+     *
+     * @return Alert
+     */
+    public function setLevel($level)
+    {
+        $this->level = $level;
+
+        return $this;
+    }
+
+    /**
+     * Get level
+     *
+     * @return integer
+     */
+    public function getLevel()
+    {
+        return $this->level;
+    }
+}
+

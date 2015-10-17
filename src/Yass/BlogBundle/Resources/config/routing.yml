@@ -1,0 +1,7 @@
+yass_blog_article:
+    resource: "@YassBlogBundle/Resources/config/routing/article.yml"
+    prefix:   /article
+
+yass_blog_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: YassBlogBundle:Default:index }

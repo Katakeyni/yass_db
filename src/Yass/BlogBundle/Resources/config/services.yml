@@ -1,0 +1,4 @@
+services:
+#    yass_blog.example:
+#        class: Yass\BlogBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
